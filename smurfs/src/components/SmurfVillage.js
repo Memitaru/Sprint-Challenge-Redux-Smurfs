@@ -13,6 +13,7 @@ class SmurfVillage extends React.Component {
             height: ""
         }
     }
+    
 
     changeHandler = e => {
         this.setState({
@@ -37,7 +38,6 @@ class SmurfVillage extends React.Component {
 
   componentDidMount() {
     this.props.getsmurf();
-    console.log(this.props);
   }
 
   render() {
