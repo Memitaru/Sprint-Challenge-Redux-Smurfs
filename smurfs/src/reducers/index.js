@@ -58,6 +58,10 @@ const smurfReducer = (state = initialstate, action) => {
       };
 
     case FETCHING_FAILURE:
+      return {
+        err: action.payload
+      }
+      
     default:
       return state;
   }

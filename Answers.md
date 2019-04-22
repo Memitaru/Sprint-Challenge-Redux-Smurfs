@@ -12,10 +12,10 @@ When an action is dispatched it goes to the reducer. The reducer does what it's 
 
 Your application state the main data in your app. Your component state is only available in that component and child components the data is passed down to.
 
-If the data needs to be shared across many components the application state is a good place for it. Application state should be used for data that needs to persist through routes as well.
+Your application state will hold most of the data in your app. If it needs to be accessed and/or reused in many parts of your app it belongs in the application state.
 
-Component state is good for things that don't affect the app as a whole. Things like form inputs work well in component state because you generally won't be using that information anywhere else in the app and once the info is submitted it can be added to the redux store.
+Component state is good for things that will affect a specific component and/or it's children. Data that changes rapidly such as input field data can also go in component state since updating it at the application state level could slow your app down. When you submit your form you could then send that data to your application state.
 
 1.  Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
 
-Redux-thunk allows you to make use of promises. Actions are by default synchronous and redux-thunk allows us to have asynchronous actions. 
+Redux-thunk allows you to make use of promises. Actions are by default synchronous and redux-thunk allows us to have asynchronous actions. It allows you to make action creators return a function instead of an action.
